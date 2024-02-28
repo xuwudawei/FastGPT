@@ -25,7 +25,7 @@ Body
 { &amp;#34;created&amp;#34;: 1589478378, &amp;#34;data&amp;#34;: [ { &amp;#34;url&amp;#34;: &amp;#34;https://...&amp;#34; }, { &amp;#34;url&amp;#34;: &amp;#34;https://...&amp;#34; } ] } 编排思路 link 通过 AI 来优化图片绘制的提示词（这部省略了，自己找提示词即可） 通过HTTP 模块调用 Dalle3 接口，获取图片的 URL。 通过文本加工来构建Markdown的图片格式。 通过指定回复来直接输出图片链接。 1. 构建 HTTP 模块 link请求参数直接复制 Dalle3 接口的即可，并求改 prompt 为变量。需要增加一个Headers.Authorization。
 Body:
 { &amp;#34;model&amp;#34;: &amp;#34;dall-e-3&amp;#34;, &amp;#34;prompt&amp;#34;: &amp;#34;{{prompt}}&amp;#34;, &amp;#34;n&amp;#34;: 1, &amp;#34;size&amp;#34;: &amp;#34;1024x1024&amp;#34; } Headers:
-Authorization: sk-xxx</description></item><item><title>全能助手</title><link>/docs/workflow/examples/versatile_assistant/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/workflow/examples/versatile_assistant/</guid><description>该教程由社区提供，部分模块已经过期，需调整后才能使用。
+Authorization: Bearer sk-xxx</description></item><item><title>全能助手</title><link>/docs/workflow/examples/versatile_assistant/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/workflow/examples/versatile_assistant/</guid><description>该教程由社区提供，部分模块已经过期，需调整后才能使用。
 众所周知 GPT 只是一个语言模型，功能上有很多局限，但只要综合利用高级编排各模块功能，就可以轻松突破原有 GPT 的局限，实现更多功能。
 当然，所谓“全能助手”只是一个遥远的设想，高级编排的玩法有很大的可能性，本文只是扩展了诸如【天气查询】、【微博热搜查询】的功能，主要还是希望大家能通过案例来了解下高级编排的思路，然后可以分享更多有意思的玩法。
 简要介绍一下“全能助手”的思路 link思路说来也简单，以下分别用文字和图片两种方式介绍下
