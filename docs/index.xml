@@ -8,7 +8,6 @@ FastGPT 能力 link1. 专属 AI 客服 link通过导入文档或已有问答对�
 5. 强大的 API 集成 linkFastGPT 对外的 API 接口对齐了 OpenAI 官方接口，可以直接接入现有的 GPT 应用，也可以轻松集成到企业微信、公众号、飞书等平台。
 FastGPT 特点 link 项目开源
 FastGPT 遵循附加条件 Apache License 2.0 开源协议，你可以 Fork 之后进行二次开发和发布。FastGPT 社区版将保留核心功能，商业版仅在社区版基础上使用 API 的形式进行扩展，不影响学习使用。
-独特的 QA 结构</description></item><item><title>线上版定价</title><link>/docs/pricing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/pricing/</guid><description>Tokens 说明 linkOpenAI 的 API 官方计费模式为：按每次 API 请求内容和返回内容 tokens 长度来定价。每个模型具有不同的计价方式，以每 1,000 个 tokens 消耗为单位定价。其中 1,000 个 tokens 约为 900 个英文，约 600 个中文（不是很准确，与上下长度有关，相同的词出现越多，词:Tokens 的比例越大）。平台的 tokens 数量计算算法与 OpenAI 一致，您可以随时通过「使用记录」来查看余额消耗明细的说明，来对比计算是否一致。
-FastGPT 线上计费 linkhttps://fastgpt.in 采用按量计费的模式，最新计费标准可在 账号-计费标准 查看。同时可以在 账号-使用记录 中查看具体使用情况，</description></item><item><title>加入社区</title><link>/docs/community/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/community/</guid><description>FastGPT 是一个由用户和贡献者参与推动的开源项目，如果您对产品使用存在疑问和建议，可尝试以下方式寻求支持。我们的团队与社区会竭尽所能为您提供帮助。
+独特的 QA 结构</description></item><item><title>线上版定价</title><link>/docs/pricing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/pricing/</guid><description>线上版价格请查看：https://cloud.fastgpt.in/price</description></item><item><title>加入社区</title><link>/docs/community/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/community/</guid><description>FastGPT 是一个由用户和贡献者参与推动的开源项目，如果您对产品使用存在疑问和建议，可尝试以下方式寻求支持。我们的团队与社区会竭尽所能为您提供帮助。
 📱 扫码加入社区微信交流群👇
 🐞 请将任何 FastGPT 的 Bug、问题和需求提交到 GitHub Issue。</description></item></channel></rss>
