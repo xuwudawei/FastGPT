@@ -366,7 +366,7 @@ warning 注意，ChatGLM2-6B 权重对学术研究完全开放，在获得官方
 这里的 http://0.0.0.0:6006 就是连接地址。
 docker 部署 link 镜像名: luanshaotong/reranker:v0.1 端口号: 6006 大小：约8GB 设置安全凭证（即oneapi中的渠道密钥）
 ACCESS_TOKEN=mytoken 运行命令示例
-docker run -d --name reranker -p 6006:6006 -e ACCESS_TOKEN=mytoken luanshaotong/reranker:v0.</description></item><item><title>接入 M3E 向量模型</title><link>/docs/development/custom-models/m3e/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/development/custom-models/m3e/</guid><description>前言 linkFastGPT 默认使用了 openai 的 embedding 向量模型，如果你想私有部署的话，可以使用 M3E 向量模型进行替换。M3E 向量模型属于小模型，资源使用不高，CPU 也可以运行。下面教程是基于 “睡大觉” 同学提供的一个的镜像。
+无需GPU环境，使用CPU运行 docker run -d --name reranker -p 6006:6006 -e ACCESS_TOKEN=mytoken luanshaotong/reranker:v0.</description></item><item><title>接入 M3E 向量模型</title><link>/docs/development/custom-models/m3e/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/development/custom-models/m3e/</guid><description>前言 linkFastGPT 默认使用了 openai 的 embedding 向量模型，如果你想私有部署的话，可以使用 M3E 向量模型进行替换。M3E 向量模型属于小模型，资源使用不高，CPU 也可以运行。下面教程是基于 “睡大觉” 同学提供的一个的镜像。
 部署镜像 link镜像名: stawky/m3e-large-api:latest
 国内镜像： registry.cn-hangzhou.aliyuncs.com/fastgpt_docker/m3e-large-api:latest 端口号: 6008 环境变量：
 # 设置安全凭证（即oneapi中的渠道密钥） 默认值：sk-aaabbbcccdddeeefffggghhhiiijjjkkk 也可以通过环境变量引入：sk-key。有关docker环境变量引入的方法请自寻教程，此处不再赘述。 接入 One API link添加一个渠道，参数如下：
