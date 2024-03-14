@@ -41,7 +41,7 @@ BATCH_UPDATE_INTERVAL=60</code>
 OPENAI_BASE_URL=https://xxxx.cloud.sealos.io/v1
 # 下面的 key 是由 One API 提供的令牌
 CHAT_API_KEY=sk-xxxxxx</code>
-  </pre></div><h2 id=接入其他模型>接入其他模型 <a href=#%e6%8e%a5%e5%85%a5%e5%85%b6%e4%bb%96%e6%a8%a1%e5%9e%8b class=anchor aria-hidden=true><i class="material-icons align-middle">link</i></a></h2><p><strong>以添加文心一言为例:</strong></p><h3 id=1-one-api-添加对应模型渠道>1. One API 添加对应模型渠道 <a href=#1-one-api-%e6%b7%bb%e5%8a%a0%e5%af%b9%e5%ba%94%e6%a8%a1%e5%9e%8b%e6%b8%a0%e9%81%93 class=anchor aria-hidden=true><i class="material-icons align-middle">link</i></a></h3><p><img src=https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-imgs@main/imgs/oneapi-demo1.png alt loading=lazy class=medium-zoom-image></p><h3 id=2-修改-fastgpt-配置文件>2. 修改 FastGPT 配置文件 <a href=#2-%e4%bf%ae%e6%94%b9-fastgpt-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6 class=anchor aria-hidden=true><i class="material-icons align-middle">link</i></a></h3><p>可以在 <code>/projects/app/src/data/config.json</code> 里找到配置文件（本地开发需要复制成 config.local.json），配置文件中有一项是对话模型配置：</p><div class=prism-codeblock><pre id=b2e1218 class=language-json>
+  </pre></div><h2 id=接入其他模型>接入其他模型 <a href=#%e6%8e%a5%e5%85%a5%e5%85%b6%e4%bb%96%e6%a8%a1%e5%9e%8b class=anchor aria-hidden=true><i class="material-icons align-middle">link</i></a></h2><p><strong>以添加文心一言为例:</strong></p><h3 id=1-one-api-添加对应模型渠道>1. One API 添加对应模型渠道 <a href=#1-one-api-%e6%b7%bb%e5%8a%a0%e5%af%b9%e5%ba%94%e6%a8%a1%e5%9e%8b%e6%b8%a0%e9%81%93 class=anchor aria-hidden=true><i class="material-icons align-middle">link</i></a></h3><p><img src=https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-imgs@main/imgs/oneapi-demo1.png alt loading=lazy class=medium-zoom-image></p><h3 id=2-修改-fastgpt-配置文件>2. 修改 FastGPT 配置文件 <a href=#2-%e4%bf%ae%e6%94%b9-fastgpt-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6 class=anchor aria-hidden=true><i class="material-icons align-middle">link</i></a></h3><p>可以在 <code>/projects/app/src/data/config.json</code> 里找到配置文件（本地开发需要复制成 config.local.json），配置文件中有一项是对话模型配置：</p><div class=prism-codeblock><pre id=6879872 class=language-json>
   <code>&#34;llmModels&#34;: [
     ...
     {
@@ -57,7 +57,7 @@ CHAT_API_KEY=sk-xxxxxx</code>
       &#34;datasetProcess&#34;: false, // 是否设置为知识库处理模型
       &#34;usedInClassify&#34;: true, // 是否用于问题分类
       &#34;usedInExtractFields&#34;: true, // 是否用于字段提取
-      &#34;useInToolCall&#34;: true, // 是否用于工具调用
+      &#34;usedInToolCall&#34;: true, // 是否用于工具调用
       &#34;usedInQueryExtension&#34;: true, // 是否用于问题优化
       &#34;toolChoice&#34;: true, // 是否支持工具选择
       &#34;functionCall&#34;: false, // 是否支持函数调用
