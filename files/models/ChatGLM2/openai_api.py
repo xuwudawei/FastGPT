@@ -1,3 +1,4 @@
+
 # coding=utf-8
 import argparse
 import time
@@ -16,6 +17,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sse_starlette.sse import EventSourceResponse
 from starlette.status import HTTP_401_UNAUTHORIZED
 from transformers import AutoModel, AutoTokenizer
+from utils import load_model_on_gpus
 
 
 @asynccontextmanager
@@ -241,20 +243,31 @@ async def get_embeddings(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name", default="16", type=str, help="Model name")
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--model_name", default="16", type=str, help="Model name")
+    # args = parser.parse_args()
 
-    model_dict = {
-        "4": "THUDM/chatglm2-6b-int4",
-        "8": "THUDM/chatglm2-6b-int8",
-        "16": "THUDM/chatglm2-6b",
-    }
+    # model_dict = {
+    #     "4": "THUDM/chatglm2-6b-int4",
+    #     "8": "THUDM/chatglm2-6b-int8",
+    #     "16": "THUDM/chatglm2-6b",
+    # }
 
-    model_name = model_dict.get(args.model_name, "THUDM/chatglm2-6b")
+    # model_name = model_dict.get(args.model_name, "THUDM/chatglm2-6b")
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-    model = AutoModel.from_pretrained(model_name, trust_remote_code=True).cuda()
-    embeddings_model = SentenceTransformer('moka-ai/m3e-large', device='cpu')
+    # tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+    # model = AutoModel.from_pretrained(model_name, trust_remote_code=True).cuda()
+    # embeddings_model = SentenceTransformer('moka-ai/m3e-large', device='cpu')
 
-    uvicorn.run(app, host='0.0.0.0', port=6006, workers=1)
+    # uvicorn.run(app, host='0.0.0.0', port=6006, workers=1)
+
+
+
+    model_path = "/hd1/dw/chatglm3-6b"
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+    model = load_model_on_gpus(model_path, num_gpus=2)
+    model.eval()
+    embeddings_model = SentenceTransformer('/hd1/dw/M3E-large', device='cpu')
+
+    uvicorn.run(app, host='0.0.0.0', port=7110, workers=1)
+

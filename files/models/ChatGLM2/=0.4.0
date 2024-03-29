@@ -1,0 +1,34 @@
+Collecting FuzzyTM
+  Downloading FuzzyTM-2.0.5-py3-none-any.whl (29 kB)
+Collecting pyfume
+  Downloading pyFUME-0.3.1-py3-none-any.whl (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.6/59.6 kB 2.2 MB/s eta 0:00:00
+Requirement already satisfied: pandas in /opt/anaconda/lib/python3.9/site-packages (from FuzzyTM) (1.4.4)
+Requirement already satisfied: scipy in /opt/anaconda/lib/python3.9/site-packages (from FuzzyTM) (1.12.0)
+Requirement already satisfied: numpy in /opt/anaconda/lib/python3.9/site-packages (from FuzzyTM) (1.24.3)
+Requirement already satisfied: python-dateutil>=2.8.1 in /opt/anaconda/lib/python3.9/site-packages (from pandas->FuzzyTM) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/anaconda/lib/python3.9/site-packages (from pandas->FuzzyTM) (2022.7)
+Collecting fst-pso
+  Downloading fst-pso-1.8.1.tar.gz (18 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: typing-extensions in /opt/anaconda/lib/python3.9/site-packages (from pyfume->FuzzyTM) (4.10.0)
+Collecting simpful
+  Downloading simpful-2.12.0-py3-none-any.whl (24 kB)
+Requirement already satisfied: six>=1.5 in /opt/anaconda/lib/python3.9/site-packages (from python-dateutil>=2.8.1->pandas->FuzzyTM) (1.16.0)
+Collecting miniful
+  Downloading miniful-0.0.6.tar.gz (2.8 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: fst-pso, miniful
+  Building wheel for fst-pso (setup.py): started
+  Building wheel for fst-pso (setup.py): finished with status 'done'
+  Created wheel for fst-pso: filename=fst_pso-1.8.1-py3-none-any.whl size=20430 sha256=51eaf8f4661bf0f060f763817988ae333ead6d46a6ef843f4e2ebaf42b9b0896
+  Stored in directory: /home/stu/.cache/pip/wheels/d7/1e/9c/3c352867b1bb1ddba0e51149a0d06c1e50c1c9b1c5ebcac787
+  Building wheel for miniful (setup.py): started
+  Building wheel for miniful (setup.py): finished with status 'done'
+  Created wheel for miniful: filename=miniful-0.0.6-py3-none-any.whl size=3513 sha256=d99d5d4b73269b8147b28d63ae3d77553c054dd49676f7b774f5e0f0ce5dcd5c
+  Stored in directory: /home/stu/.cache/pip/wheels/37/45/a2/db878712db97aaab6f574d750789bc6c99e3b706af8af6b936
+Successfully built fst-pso miniful
+Installing collected packages: simpful, miniful, fst-pso, pyfume, FuzzyTM
+Successfully installed FuzzyTM-2.0.5 fst-pso-1.8.1 miniful-0.0.6 pyfume-0.3.1 simpful-2.12.0
